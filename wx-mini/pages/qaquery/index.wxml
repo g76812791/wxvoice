@@ -1,0 +1,3 @@
+<view class="container">
+  <web-view src="{{qaurl}}/qa.wap/query?q={{q}}&r=query&t={{t}}" />
+</view>

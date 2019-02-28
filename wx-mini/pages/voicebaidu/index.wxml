@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class='v-tip'>
+<text class='describe'>{{tip}}</text>
+<image class='img' wx:if='{{showimg}}' src='./timg.gif'></image>
+
+<button class="btn" open-type="openSetting" wx:if='{{showOrHidden}}'  bindopensetting="setcallback">打开授权</button>
+
+
+<text class='describe shuo'>按住说话</text>
+
+<button  class="circle" disabled="{{voiceButtonDisable}}" bindtouchstart='touchStart' bindtouchend="touchEnd">
+</button>
+
+</view>
+
