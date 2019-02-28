@@ -1,0 +1,22 @@
+
+微信小程序 开发者工具下载地址
+https://developers.weixin.qq.com/miniprogram/dev/#安装开发工具
+
+微信小程序邮箱
+
+账号：qacnki@163.com   密码：cnki.net
+
+小程序 后台登录地址
+https://mp.weixin.qq.com/
+
+账号：qacnki@163.com   密码：cnki.net
+
+
+微信公众号接口文档地址
+
+https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1445241432
+
+百度语音接口文档地址
+https://console.bce.baidu.com
+
+

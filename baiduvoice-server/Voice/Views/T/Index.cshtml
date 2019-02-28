@@ -1,0 +1,96 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>web-view Demo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+
+    <style type="text/css">
+        .div {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            height: 200px;
+            background-color: #f0f;
+        }
+
+        .btn {
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="div">
+
+        <input class="btn" type="button" value="47745" onclick="fnClick()">
+
+        <input class="btn" type="button" value="tab" onclick="fnClick2()">
+
+        <input class="btn" type="button" value="back" onclick="fnClick3()">
+
+        <input id="show" type="text" value="result" />
+
+    </div>
+
+    <script>
+
+        function ready() {
+            if (window.__wxjs_environment === 'miniprogram') {
+                console.log(1);
+            }
+        }
+
+        if (!window.WeixinJSBridge || !WeixinJSBridge.invoke) {
+            document.addEventListener('WeixinJSBridgeReady', ready, false);
+        } else {
+            ready();
+        }
+
+
+		function fnClick() {
+		    wx.miniProgram.navigateTo({ url: '/pages/qaquery/index?q=红楼梦' });
+			var ret = document.getElementById("show");
+			ret.value = "47745";
+
+		}
+
+		function fnClick2() {
+
+			var ret = document.getElementById("show");
+
+			ret.value = "tab";
+
+			wx.miniProgram.switchTab({url:"/pages/logs/logs"});
+
+		}
+
+		function fnClick3() {
+
+			var ret = document.getElementById("show");
+
+			ret.value = "back";
+
+			wx.miniProgram.navigateBack({});
+
+		}
+
+    </script>
+
+</body>
+
+
+
+</html>
