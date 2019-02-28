@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!--dbview需要转成大写-->
+  <![CDATA[
+{
+    "DomainMap": { 
+         "Library": {         
+            "FAQEX": ["机器人对话","闲聊"]
+        }    
+     }
+}
+  ]]>
+</root>

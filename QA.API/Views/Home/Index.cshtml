@@ -1,0 +1,130 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style type="text/css">
+    .test {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        transition: all .6s ease-in-out;
+        -webkit-transition: all .6s ease-in-out;
+        -moz-transition: all .6s ease-in-out;
+        -o-transition: all .6s ease-in-out;
+        -ms-transition: all .6s ease-in-out;
+        background-color: orange;
+        position: relative;
+    }
+    .test::after {
+        content: '∨';
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: red;
+    }
+    .test:hover {
+        height: 200px;
+        background-color: purple;
+    }
+    .test:hover::after {
+        content: '∧'
+    }
+</style>
+
+
+@*
+<div class="test">
+    正值毕业生求职季，各路招聘网站上，年终奖已成为企业吸引人才的“标配”。与此同时，吐槽年终奖的声音也多:有的单位出手大方，有的悭吝寒酸，有的临时决定啥也不发;有的抽奖，员工靠运气“抢”，有的甚至几袋馒头“意思一下”……年终奖发不发、怎么发，门道真不少。
+</div>
+*@
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p>
+            <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p>
+            <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p>
+            <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a>
+        </p>
+    </div>
+</div>
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+<script>
+    var contentType = "application/x-www-form-urlencoded; charset=utf-8";
+    if (window.XDomainRequest)
+        contentType = "text/plain";
+    $.ajax({
+        url: 'http://192.168.107.232/qa.api/getsgdata',
+        data: { q: '糖尿病' },
+        type: "get",
+        contentType: contentType,
+        dataType: 'json',
+        success: function (result) {
+        }
+    });
+
+    $.ajax({
+        url: 'http://192.168.107.232/qa.api/getkbdata',
+        data:{q:'糖尿病'},
+        type: "get",
+        contentType: contentType,
+        dataType: 'json',
+        success: function (result) {
+        }
+    });
+
+    $.ajax({
+        url: 'http://192.168.107.232/qa.api/getfaqdata',
+        data: { q: '糖尿病' },
+        type: "get",
+        contentType: contentType,
+        dataType: 'json',
+        success: function (result) {
+        }
+    });
+
+    $.ajax({
+        url: 'http://localhost/qa.r/getreladata',
+        data: { q: '糖尿病',domain:'农业' },
+        type: "get",
+        contentType: contentType,
+        dataType: 'json',
+        success: function (result) {
+        }
+    });
+
+   /* $.ajax({
+        url: 'http://192.168.107.232/qa.r/api/GetKB',
+        data: { content: '糖尿病' },
+        type: "get",
+        contentType: contentType,
+        dataType: 'json',
+        success: function (result) {
+        }
+    });*/
+</script>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!--dbview需要转成大写-->
+  <![CDATA[
+{
+    "DomainMap": {  
+       "农业": {            
+            "FAQ": ["农业"],
+            "SG": ["农业"]
+        },
+         "default": {         
+            "FAQ": ["农业_工具书"]
+        }    
+     }
+}
+  ]]>
+</root>
